@@ -8,12 +8,12 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class RegistroComponent implements OnInit {
   registro = [];
-  alumno: any;
+  cliente: any;
   nombre: string;
   dui :string;
   Vehiculo : string;
   costo:number;
-  mayor: string;
+  mayor: string; 
   contador: number; constructor() {
   }
   ngOnInit() {
@@ -23,14 +23,14 @@ export class RegistroComponent implements OnInit {
     this.costo = 0;
     this.contador = 0;
   } ingresar() {
-     this.alumno = {
+     this.cliente = {
       "nombre": this.nombre,
       "dui": this.dui,
       "Vehiculo": this.Vehiculo,
       "costo": this.costo,
       "mayor": this.mayor
     };
-    this.registro.push(this.alumno);
+    this.registro.push(this.cliente);
     this.contador++;
   }
 }
