@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from '../cliente';
 
 @Component({
   selector: 'app-cliente',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
+  nacionalidad =['', 'El salvador','Mexico','Rusia','Mongolia'];
+  cliente = new Cliente (1,'','',23);
+  enviar= false;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  onSubmit(){
+    this.enviar=true;
   }
 
 }
